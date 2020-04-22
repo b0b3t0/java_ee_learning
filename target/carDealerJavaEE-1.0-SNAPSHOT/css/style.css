@@ -7,6 +7,15 @@ body {
      background-color: #464646;
  }
 
+body:after {
+     content:'';
+     display: block;
+     background-color: rgba(0, 0, 0, 0.3);
+     width: 100vw;
+     height: 100vh;
+     position: absolute;
+}
+
 .bg-text {
      background-color: rgb(0,0,0); /* Fallback color */
      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
