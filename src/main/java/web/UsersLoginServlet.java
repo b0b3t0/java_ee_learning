@@ -36,6 +36,7 @@ public class UsersLoginServlet extends HttpServlet {
         if (user == null) {
             resp.sendRedirect("/users/login");
         } else {
+            req.getSession().setAttribute("user", user.getUsername());
             resp.sendRedirect("/home");
         }
     }
