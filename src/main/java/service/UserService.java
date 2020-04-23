@@ -1,4 +1,6 @@
-package services;
+package service;
 
-public class UserService {
+public interface UserService {
+
+    void create(String username, String email, String password, String confirmPassword);
 }
