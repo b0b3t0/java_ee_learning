@@ -1,7 +1,5 @@
 package model.entity;
 
-import org.hibernate.annotations.JoinColumnOrFormula;
-
 import javax.persistence.*;
 
 @Entity
@@ -9,7 +7,7 @@ public class Car extends BaseEntity {
     private String brand;
     private String model;
     private String year;
-    private Engines engines;
+    private Engine engine;
     private User user;
 
     public Car() {
@@ -45,12 +43,12 @@ public class Car extends BaseEntity {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    public Engines getEngines() {
-        return engines;
+    public Engine getEngine() {
+        return engine;
     }
 
-    public void setEngines(Engines engines) {
-        this.engines = engines;
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 
     @ManyToOne
