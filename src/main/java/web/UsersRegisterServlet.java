@@ -34,6 +34,10 @@ public class UsersRegisterServlet extends HttpServlet {
         String password = req.getParameter("password");
         String confirmPassword = req.getParameter("confirmPassword");
 
-        userService.create(username, email, password, confirmPassword);
+        try {
+            userService.register(username, email, password, confirmPassword);
+        } catch (Exception e) {
+            resp.sendRedirect("/users/register");
+        }
     }
 }

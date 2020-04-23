@@ -1,6 +1,10 @@
 package service;
 
+import model.service.UserServiceModel;
+
 public interface UserService {
 
-    void create(String username, String email, String password, String confirmPassword);
+    void register(String username, String email, String password, String confirmPassword) throws Exception;
+
+    UserServiceModel login(String username, String password);
 }
