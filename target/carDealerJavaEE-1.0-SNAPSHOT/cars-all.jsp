@@ -1,5 +1,6 @@
 <%@ page import="model.service.CarViewModel" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Set" %><%--
   Created by IntelliJ IDEA.
   User: Bobo
   Date: 4/22/2020
@@ -47,7 +48,7 @@
     <h2 class="text-center text-white mt-5">West Compass Offers</h2>
     <hr style="width: 50%"/>
     <div class='row mb-4 d-flex justify-content-around'>
-        <% for (CarViewModel car : ((List<CarViewModel>)request.getAttribute("viewModel"))) { %>
+        <% for (CarViewModel car : (Set<CarViewModel>) (request.getAttribute("viewModel"))) { %>
         <div class="col-md-4 d-flex flex-column bg-text mb-3">
             <h2>Owner: <%= car.getUserUsername() %></h2>
             <h2>Brand: <%= car.getBrand()%></h2>
